@@ -1,4 +1,3 @@
-import { cookies } from "next/headers";
 import jwt from "jsonwebtoken";
 
 const SECRET = process.env.JWT_SECRET || "default_secret";
