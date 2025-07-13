@@ -10,7 +10,7 @@ const SECRET = process.env.JWT_SECRET || "segredo-temporario";
 export async function POST(req: NextRequest) {
   const { email, password } = await req.json();
 
-  const user = await prisma.user.findUnique({ where: { email } });
+  const user = await prisma.users.findUnique({ where: { email } });
 
   if (!user) {
     return Response.json({ error: "Usuário não encontrado." }, { status: 401 });
